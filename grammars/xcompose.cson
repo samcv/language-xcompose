@@ -1,0 +1,51 @@
+'scopeName': 'config.xcompose'
+'name': 'XCompose'
+'fileTypes': [
+  'XCompose'
+]
+'patterns': [
+  { 'include': '#comment' }
+  { 'include': '#multikey' }
+  { 'include': '#key' }
+  { 'include': '#quoted' }
+  { 'include': '#function' }
+  { 'include': '#colon' }
+  { 'include': '#unicode' }
+]
+'repository':
+  'comment':
+    'match': '#.*'
+    'name': 'comment.block.xcompose'
+  'multikey':
+    'match': '(?x) ( < ) ( Multi_key ) ( > )'
+    'captures':
+      1:
+        'name': 'entity.function.xcompose'
+      2:
+        'name': 'declarator.xcompose'
+      3:
+        'name': 'entity.function.xcompose'
+    'name': 'variable.keyword.xcompose'
+
+  'key':
+    'match': '(?x) ( < ) ( \\S+ ) ( > )'
+    'captures':
+      1:
+        'name': 'entity.function.xcompose'
+      2:
+        'name': 'keyword.xcompose'
+      3:
+        'name': 'entity.function.xcompose'
+    'name': 'variable.keyword.xcompose'
+
+  'quoted':
+    'match': '".*"'
+    'name': 'string.quoted.double.xcompose'
+
+  'colon':
+    'match': ':'
+    'name': 'entity.function'
+
+  'unicode':
+    'match': 'U[0-9A-Fa-f]+'
+    'name': 'storage.modifier.unicode.xcompose'

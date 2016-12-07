@@ -1,0 +1,24 @@
+{
+  "name": "language-xcompose",
+  "version": "0.1.0",
+  "description": "XCompose language support in Atom",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "keywords": [
+    "atom",
+    "X11",
+    "XCompose",
+    "XOrg"
+  ],
+  "homepage": "https://github.com/samcv/language-xcompose",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samcv/language-xcompose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samcv/language-xcompose/issues"
+  }
+}
