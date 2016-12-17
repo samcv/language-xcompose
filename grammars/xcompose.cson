@@ -11,6 +11,7 @@
   { 'include': '#function' }
   { 'include': '#colon' }
   { 'include': '#unicode' }
+  { 'include': '#keyword' }
 ]
 'repository':
   'comment':
@@ -22,10 +23,10 @@
       1:
         'name': 'entity.function.xcompose'
       2:
-        'name': 'declarator.xcompose'
+        'name': 'declaror.class.xcompose'
       3:
         'name': 'entity.function.xcompose'
-    'name': 'variable.keyword.xcompose'
+    #'name': 'variable.keyword.xcompose'
 
   'key':
     'match': '(?x) ( < ) ( \\S+ ) ( > )'
@@ -33,10 +34,10 @@
       1:
         'name': 'entity.function.xcompose'
       2:
-        'name': 'keyword.xcompose'
+        'name': 'keyword.xcompose.xcompose'
       3:
         'name': 'entity.function.xcompose'
-    'name': 'variable.keyword.xcompose'
+  #  'name': 'variable.keyword.xcompose'
 
   'quoted':
     'match': '".*"'
@@ -44,7 +45,10 @@
 
   'colon':
     'match': ':'
-    'name': 'entity.function'
+    'name': 'entity.function.xcompose'
+  'keyword':
+    'match': '\binclude\b'
+    'name': 'entity.function.xcompose'
 
   'unicode':
     'match': 'U[0-9A-Fa-f]+'
